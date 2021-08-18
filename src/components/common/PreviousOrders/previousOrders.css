@@ -1,0 +1,15 @@
+.previousOrders{
+    background-color: white;
+    color: rgb(255, 209, 4);
+    font-size: 50px;
+    height: 100px;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: double;
+    border-top-left-radius: 35%;
+    border-top-right-radius: 35%;
+}

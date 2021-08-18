@@ -1,0 +1,18 @@
+.searchInput{
+    background-color: rgb(255, 209, 4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+
+.searchInput__item{
+    width: 80%;
+    height: 30px;
+    border-radius: 15px;
+    border-style: none;
+}
+.searchInput__item::-webkit-input-placeholder{
+    text-align: center;
+    color: rgb(180, 180, 180);
+}

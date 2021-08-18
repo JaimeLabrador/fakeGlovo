@@ -1,0 +1,27 @@
+.headerItems{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(255, 209, 4);
+}
+
+.headerItems__direction{
+    color: white;
+    text-align: center;
+}
+
+.far{
+    color: white;
+    font-size: 35px;
+}
+
+.fa-chevron-down{
+    font-size: 18px;
+    color: white;
+}
+
+.fa-sign-out-alt{
+    font-size: 35px;
+    color: white;
+    transform: rotate(-90deg);
+}
