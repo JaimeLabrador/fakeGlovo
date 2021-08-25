@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { useHistory } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import firebase from "../../config/firebase";
 import GoogleButton from "react-google-button";
+import loginImage from "../../assets/loginImage.jpg";
+import "./login.css"
 
 export const userContext = React.createContext(null);
 
@@ -38,13 +40,16 @@ const Login = () => {
   }
  
   return (
-      <div>
-        <form onSubmit={handleSubmit(onSubmit)}>
-          <input {...register("email")} />
-          <input {...register("password")} />
-          <button type="submit">Login</button>
+      <div className='login'>
+        <img src={loginImage} alt='logo' className='login__logo'/>
+        <form className='login__form' onSubmit={handleSubmit(onSubmit)}>
+          <input className='email__input' {...register("email")} />
+          <input className='password__input' {...register("password")} />
+          <button className='login__button' type="submit">Login</button>
+          <GoogleButton className='login__google' label='Entrar con Google' onClick={handleGoogleLogin}/>
+          <h3 className='register__text'>Aún no estás registrado?</h3>
+          <Link className='register__link' to="/register"> Registrarme </Link>
         </form>
-        <GoogleButton label='Entrar con Google' onClick={handleGoogleLogin}/>
       </div>
   );
 };
