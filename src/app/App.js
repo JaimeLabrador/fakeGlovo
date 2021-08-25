@@ -9,11 +9,8 @@ import SearchInput from "../components/common/SearchInput";
 import Home from "../components/Home";
 import Login from "../components/Login";
 import Register from "../components/Register";
-//import { userContext } from "../components/Login/Login";
 
 function App() {
-  //const userData = useContext(userContext);
-  //console.log(userData);
   const [user, setUser] = useState();
   useEffect (() => {
     firebase.auth().onAuthStateChanged(currentUser => {
@@ -22,9 +19,8 @@ function App() {
       } else {
         setUser(null)
       }
-      console.log(currentUser)
     })
-  }, [])
+  },[])
 
   return (
     <Router>

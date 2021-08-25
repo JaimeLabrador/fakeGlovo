@@ -31,7 +31,6 @@ const Login = () => {
   const handleGoogleLogin = () => {
     const provider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(provider).then (() => {
-      console.log({currentUser});
       history.push("/");
     }).catch((err) => {
       console.log("error in login...", err.message);

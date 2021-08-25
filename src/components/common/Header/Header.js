@@ -17,7 +17,7 @@ const Header = () => {
             <div className="headerItems">
                 <span className="far fa-user-circle"></span>
                 <p className="headerItems__direction" >Dirección del usuario <span className="fas fa-chevron-down"></span></p>
-                <button onClick={logOut} type='submit'><span className="fas fa-sign-out-alt"></span></button>
+                <button className='logOut__button' onClick={logOut} type='submit'><span className="fas fa-sign-out-alt"></span></button>
             </div>
         </header>
     )
